@@ -1,0 +1,3 @@
+<h2><%= profile.name %></h2>
+<a href="/profiles/<%= profile %>/edit">Edit</a>
+<%- include('../partials/deleteForm', {url: `/profiles/${ profile.id}` }) %> 

@@ -1,0 +1,13 @@
+<h2>Search Profile</h2>
+<form action="/profiles" method="GET">
+    <label>Name You Want To Search</label>
+    <input type="text" name="name" value="<%= searchOption.name %>">
+    <button type="submit">Search</button>
+</form>
+<br>
+<br>
+<% profiles.forEach(profile => { %>
+    <div><a href="/profiles/<%= profile.id %>">View</a></div>
+    <a href="/profiles/<%= profile.id %>/edit ">Edit</a>
+    <%- include('../partials/deleteForm', {url: `/profiles/${author.id}`}) %>
+<% }) %>    
